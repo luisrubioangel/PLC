@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLC WEB</title>
+    <link rel="shortcut icon" href="./build/img/PLC_ico.webp" />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1 class="titulo">PLC server</h1>
+      </div>
+    </header>
+
+    <section id="lineup" class="lineup">
+      <div class="contenedor">
+        <h2>Solución del Problema 1</h2>
+      </div>
+      <div class="contenedor">
+         <p>Se desea controlar la cantidad de piezas que pasan por un proseso de produccion y derminar el total de piezas que se han fabericado, cuantos han sido buenasy cuantos han sido malas</p>
+         <p>Elemento a considerar : 3 contadores, 2 sensores, 1 pulsador de reset y proteccion con un rele termico</p>
+          <div class="imagen">
+            <picture>
+                <source srcset="./build/img/PLC-selector.webp" type="image/webp ">
+                <img class="" loading="lazy" src="./build/img/PLC-selector.png" alt="" title="">
+            </picture>
+
+          </div>
+         
+      </div>
+      
+    </section>
+
+    <section id="galeria" >
+        <h2></h2>
+         <div class="contenedor contadores">
+             <p> <span id="MAterialA">0</span> Materiales buenos </p>
+             <p> <span id="MAterialB">0</span> Materiales malos </p>
+             <p> <span id="MAterialT">0</span> Materiales en total </p>
+        </div>
+        <div class="contenedor botones">
+        
+                <p id="sensorA" class="btn">Sensor A</p>
+                <p id="sensorB" class="btn">Sensor B</p>
+                <p id="pulsadorReset" class="btn">Pulsador de reset</p>
+            
+           
+        </div>
+
+    </section>
+    <footer class="footer">
+
+    </footer>
+
+
+   
+    <script src="build/js/bundle.min.js"></script>
+  </body>
+</html>
