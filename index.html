@@ -1,3 +1,5 @@
+<!-- AWP_In_Variable Name='"DB".start'-->
+<!-- AWP_Out_Variable Name='motor' Use='"DB".motor'-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,65 +17,41 @@
     </header>
 
     <section id="lineup" class="lineup">
-      <div class="contenedor">
+      <div class="contenedor center">
         <h2>Solución del Problema 2</h2>
       </div>
-      <div class="contenedor">
-         <p>Se desea controlar el funcionamiento de un motor mediante paro-marcha y la proteccion de un rele termico</p>
-         <p>Elemento a considerar : 2 pulsadores </p>
-          <div class="imagen">
-            <picture>
-                <source srcset="./build/img/PLC-selector.webp" type="image/webp ">
-                <img class="" loading="lazy" src="./build/img/PLC-selector.png" alt="" title="">
-            </picture>
+    </section>
 
-          </div>
-         
+    <section class="contenedor" id="galeria">
+      <div id="titulo">
+        <h1 style="font-family: Arial">HMI</h1>
+        <h2>Control de un motro encendido apagado</h2>
+      </div>
+
+      <div class="row">
+        <div class="columna">
+          <form method="post" action=" ">
+            <input class="btn botones" type="submit" value="start" id="start" />
+            <input
+              class="btn botones"
+              type="hidden"
+              name='"DB".start'
+              value="1"
+            />
+          </form>
+        </div>
+
+        <div class="columna">
+          <form method="post" >
+            <input class="btn botones-stop" type="submit" value="stop" id="stop" />
+            <input type="hidden" name='"DB".start' value="0" />
+          </form>
+        </div>
       </div>
       
     </section>
+    <footer class="footer"></footer>
 
-    <section class="contenedor" id="galeria" >    
-      <div id="titulo">
-          <h1 style="font-family: Arial">HMI</h1>
-      </div>
-  
-      <div class="row">
-  
-          <div class="columna">
-              <form method="post" action=" ">
-  
-                  <input type="submit" value="start" id="start">
-                  <input type="hidden" name='"DB".start' value="1">
-  
-              </form>
-          </div>
-  
-          <div class="columna">
-              <form method="post" action=" " >
-  
-                  <input type="submit" value="stop" id="stop">
-                  <input type="hidden" name='"DB".start' value="0">
-  
-              </form>
-          </div>
-      </div>
-  
-      <div>
-          <svg width="400" height="100">
-              <rect id="rectangulo" width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
-          </svg>
-      </div>
-   
-
-
-    </section>
-    <footer class="footer">
-
-    </footer>
-
-
-   
     <script src="build/js/bundle.min.js"></script>
   </body>
 </html>
