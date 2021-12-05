@@ -16,11 +16,11 @@
 
     <section id="lineup" class="lineup">
       <div class="contenedor">
-        <h2>Solución del Problema 1</h2>
+        <h2>Solución del Problema 2</h2>
       </div>
       <div class="contenedor">
-         <p>Se desea controlar la cantidad de piezas que pasan por un proseso de produccion y derminar el total de piezas que se han fabericado, cuantos han sido buenasy cuantos han sido malas</p>
-         <p>Elemento a considerar : 3 contadores, 2 sensores, 1 pulsador de reset y proteccion con un rele termico</p>
+         <p>Se desea controlar el funcionamiento de un motor mediante paro-marcha y la proteccion de un rele termico</p>
+         <p>Elemento a considerar : 2 pulsadores </p>
           <div class="imagen">
             <picture>
                 <source srcset="./build/img/PLC-selector.webp" type="image/webp ">
@@ -33,21 +33,39 @@
       
     </section>
 
-    <section id="galeria" >
-        <h2></h2>
-         <div class="contenedor contadores">
-             <p> <span id="MAterialA">0</span> Materiales buenos </p>
-             <p> <span id="MAterialB">0</span> Materiales malos </p>
-             <p> <span id="MAterialT">0</span> Materiales en total </p>
-        </div>
-        <div class="contenedor botones">
-        
-                <p id="sensorA" class="btn">Sensor A</p>
-                <p id="sensorB" class="btn">Sensor B</p>
-                <p id="pulsadorReset" class="btn">Pulsador de reset</p>
-            
-           
-        </div>
+    <section class="contenedor" id="galeria" >    
+      <div id="titulo">
+          <h1 style="font-family: Arial">HMI</h1>
+      </div>
+  
+      <div class="row">
+  
+          <div class="columna">
+              <form method="post" action=" ">
+  
+                  <input type="submit" value="start" id="start">
+                  <input type="hidden" name='"DB".start' value="1">
+  
+              </form>
+          </div>
+  
+          <div class="columna">
+              <form method="post" action=" " >
+  
+                  <input type="submit" value="stop" id="stop">
+                  <input type="hidden" name='"DB".start' value="0">
+  
+              </form>
+          </div>
+      </div>
+  
+      <div>
+          <svg width="400" height="100">
+              <rect id="rectangulo" width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+          </svg>
+      </div>
+   
+
 
     </section>
     <footer class="footer">

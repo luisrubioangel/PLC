@@ -1,0 +1,79 @@
+<!-- AWP_In_Variable Name='"DB".start'-->
+<!-- AWP_Out_Variable Name='motor' Use='"DB".motor'-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+
+<head>
+
+<title>Web Server</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+    <script type="text/javascript">
+    
+        function color(variable){
+    
+            if (variable == 1){
+    
+                $("#rectangulo").css("fill", "#00FF00")
+    
+            } else{
+    
+                $("#rectangulo").css("fill", "#FF0000")
+            }
+        }
+        
+    $(function(){
+        color(motor)
+    });
+    
+    </script>
+    
+    <div class="container">
+    
+        <div id="titulo">
+            <h1 style="font-family: Arial">HMI</h1>
+        </div>
+    
+        <div class="row">
+    
+            <div class="columna">
+                <form method="post" action=" ">
+    
+                    <input type="submit" value="start" id="start">
+                    <input type="hidden" name='"DB".start' value="1">
+    
+                </form>
+            </div>
+    
+            <div class="columna">
+                <form method="post" action=" " >
+    
+                    <input type="submit" value="stop" id="stop">
+                    <input type="hidden" name='"DB".start' value="0">
+    
+                </form>
+            </div>
+        </div>
+    
+        <div>
+    
+            <svg width="400" height="100">
+                <rect id="rectangulo" width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+            </svg>
+        </div>
+    </div> 
+
+</body>
+
+</html>
