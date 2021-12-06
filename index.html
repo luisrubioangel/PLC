@@ -1,5 +1,11 @@
 <!-- AWP_In_Variable Name='"DB".start'-->
-<!-- AWP_Out_Variable Name='motor' Use='"DB".motor'-->
+<!-- AWP_In_Variable Name='"DB".sensro_bueno'-->
+<!-- AWP_In_Variable Name='"DB".sensor_malo'-->
+<!-- AWP_In_Variable Name='"DB".reset'-->
+<!-- AWP_Out_Variable Name='run' Use='"DB".run'-->
+<!-- AWP_Out_Variable Name='cuenta1' Use='"DB".cuenta1'-->
+<!-- AWP_Out_Variable Name='cuenta2' Use='"DB".cuenta2'-->
+<!-- AWP_Out_Variable Name='cuenta3' Use='"DB".cuenta3'-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,42 +22,67 @@
       </div>
     </header>
 
-    <section id="lineup" class="lineup">
-      <div class="contenedor center">
-        <h2>Solución del Problema 2</h2>
+    <section id="galeria">
+      <h2></h2>
+      <div class="contenedor contadores">
+        <p><span id="MAterialA"> :="DB".cuenta1:</span> Materiales buenos</p>
+        <p><span id="MAterialB">:="DB".cuenta2:</span> Materiales malos</p>
+        <p><span id="MAterialT"> :="DB".cuenta3:</span> Materiales en total</p>
       </div>
-    </section>
+      <!-- <div class="contenedor botones">
+        
+                <p id="sensorA" class="btn">Sensor A</p>
+                <p id="sensorB" class="btn">Sensor B</p>
+                <p id="pulsadorReset" class="btn">Pulsador de reset</p>
+            
+           
+        </div> -->
+      <div class="contenedor botones">
+        <div>
+          <div class="columna">
+            <form method="post" action=" ">
+              <input class="btn" type="submit" value="sensro_bueno" id="start" />
+              <input type="hidden" name='"DB".sensro_bueno' value="1" />
+            </form>
+          </div>
+  
+          <div class="columna">
+            <form method="post" action=" ">
+              <input class="btn botones-stop" type="submit" value="sensor_malo" id="start" />
+              <input type="hidden" name='"DB".sensor_malo' value="1" />
+            </form>
+          </div>
 
-    <section class="contenedor" id="galeria">
-      <div id="titulo">
-        <h1 style="font-family: Arial">HMI</h1>
-        <h2>Control de un motro encendido apagado</h2>
-      </div>
-
-      <div class="row">
-        <div class="columna">
-          <form method="post" action=" ">
-            <input class="btn botones" type="submit" value="start" id="start" />
-            <input
-              class="btn botones"
-              type="hidden"
-              name='"DB".start'
-              value="1"
-            />
-          </form>
         </div>
+        
 
-        <div class="columna">
-          <form method="post" >
-            <input class="btn botones-stop" type="submit" value="stop" id="stop" />
-            <input type="hidden" name='"DB".start' value="0" />
-          </form>
+
+        <div>
+          <div class="columna">
+            <form method="post" action=" ">
+              <input class="btn" type="submit" value="sensor off" id="start" />
+              <input type="hidden" name='"DB".sensor_malo' value="0" />
+              <input type="hidden" name='"DB".sensro_bueno' value="0" />
+              <input type="hidden" name='"DB".reset' value="0" />
+            </form>
+          </div>
+
+          <div class="columna">
+            <form method="post" action=" ">
+              <input
+                class="btn botones-stop"
+                type="submit"
+                value="reset"
+                id="start"
+              />
+              <input type="hidden" name='"DB".reset' value="1" />
+            </form>
+          </div>
         </div>
       </div>
-      
     </section>
     <footer class="footer"></footer>
 
-    <script src="build/js/bundle.min.js"></script>
+    <!-- <script src="build/js/bundle.min.js"></script> -->
   </body>
 </html>
