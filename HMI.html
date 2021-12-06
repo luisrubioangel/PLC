@@ -1,0 +1,97 @@
+<!-- AWP_In_Variable Name='"DB".start'-->
+<!-- AWP_In_Variable Name='"DB".sensro_bueno'-->
+<!-- AWP_In_Variable Name='"DB".sensor_malo'-->
+<!-- AWP_In_Variable Name='"DB".reset'-->
+<!-- AWP_Out_Variable Name='run' Use='"DB".run'-->
+<!-- AWP_Out_Variable Name='cuenta1' Use='"DB".cuenta1'-->
+<!-- AWP_Out_Variable Name='cuenta2' Use='"DB".cuenta2'-->
+<!-- AWP_Out_Variable Name='cuenta3' Use='"DB".cuenta3'-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+
+<head>
+
+<title>Web Server</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<script src="js/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="build/css/app.css" />
+
+<style>
+
+</style>
+
+</head>
+
+<body class="body">
+
+    <script type="text/javascript">
+    
+        
+    
+    </script>
+    
+    <div class="contenedor">
+    
+        <div id="titulo">
+            <h1 style="font-family: Arial">TRABAJO DE INVESTIGACION WEB SERVER: Tello Vargas</h1>
+        </div>
+    
+        <div class="row">
+    
+            
+
+            <div class="columna">
+                <form method="post" action=" ">
+    
+                    <input class="btn botones-alterna" type="submit" value="sensro_bueno" id="start">
+                    <input type="hidden" name='"DB".sensro_bueno' value="1">
+    
+                </form>
+            </div>
+    
+            <div class="columna">
+                <form method="post" action=" ">
+    
+                    <input class="btn botones-alterna" type="submit" value="sensor_malo" id="start">
+                    <input type="hidden" name='"DB".sensor_malo' value="1">
+    
+                </form>
+            </div>
+
+            <div class="columna">
+                <form method="post" action=" ">
+    
+                    <input class="btn botones-alterna" type="submit" value="sensor off" id="start">
+                    <input type="hidden" name='"DB".sensor_malo' value="0">
+                    <input type="hidden" name='"DB".sensro_bueno' value="0">
+                    <input type="hidden" name='"DB".reset' value="0">
+    
+                </form>
+            </div>
+
+            <div class="columna">
+                <form method="post" action=" ">
+    
+                    <input class="btn botones-alterna" type="submit" value="reset" id="start">
+                    <input type="hidden" name='"DB".reset' value="1">
+    
+                </form>
+            </div>
+
+            
+        </div>
+    
+        
+    </div> 
+<div class="center">
+    <p> <span>PIEZAS BUENAS</span> :="DB".cuenta1:</p>
+<p> <span>PIEZAS MALAS</span> :="DB".cuenta2:</p>
+<p> <span>PIEZAS TOTALES</span> :="DB".cuenta3:</p>
+
+</div>
+
+</body>
+
+</html>

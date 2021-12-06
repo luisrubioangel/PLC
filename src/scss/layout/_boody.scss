@@ -33,6 +33,18 @@
     }
     background-color: brown;
   }
+  &-alterna {
+    margin: 2rem auto;
+    transition: 0.8s;
+    display: flex;
+    justify-content: space-evenly;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(42, 165, 58, 0.473);
+    }
+    background-color: rgb(42, 165, 42);
+  }
 }
 .contadores {
   display: flex;
@@ -60,6 +72,10 @@
   .motor {
   }
 }
-body{
-  background-color: rgba(0, 255, 234, 0.521);
+.body{
+  background-color: rgba(0, 81, 255, 0.521);
+}
+.center{
+  text-align: center;
+  background-color: rgba(0, 139, 139, 0.281);
 }
